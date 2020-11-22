@@ -13,6 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <NhostAuthProvider auth={auth}>
       <NhostApolloProvider
+        auth={auth}
         gqlEndpoint={process.env.REACT_APP_NHOST_HASURA_GRAPHQL}
       >
         <Router>
