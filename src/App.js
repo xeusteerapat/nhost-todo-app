@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSubscription } from '@apollo/client';
 import gql from 'graphql-tag';
+import { Link } from 'react-router-dom';
+import { auth } from 'utils/nhost';
 import TodoForm from 'TodoForm';
 
 const GET_TODOS = gql`
@@ -23,6 +25,10 @@ function App() {
 
   return (
     <div>
+      <Link to='/login'>Login</Link>
+      <div>
+        <button onClick={() => auth.logout()}>Logout</button>
+      </div>
       <h1>Nhost Todo App</h1>
       <TodoForm />
       {!data ? (
