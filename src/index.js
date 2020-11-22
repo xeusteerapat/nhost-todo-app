@@ -7,8 +7,7 @@ import { NhostApolloProvider } from '@nhost/react-apollo';
 ReactDOM.render(
   <React.StrictMode>
     <NhostApolloProvider
-      gqlEndpoint='https://hasura-da84f022.nhost.app/v1/graphql
-'
+      gqlEndpoint={process.env.REACT_APP_NHOST_HASURA_GRAPHQL}
     >
       <App />
     </NhostApolloProvider>
