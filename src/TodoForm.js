@@ -34,7 +34,6 @@ const TodoForm = () => {
       return alert('Error on creating todo');
     }
 
-    alert('Todo created');
     setTodoName('');
   };
 
